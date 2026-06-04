@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>آزمون MBTI | روان‌طب و کلینیک روان‌درمانی روزبه</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+  <div id="loader">
+    <div class="loader-box">
+      <div class="loader-orb"></div>
+      <h1 class="loader-title">آماده‌سازی کهکشان MBTI</h1>
+      <p class="loader-sub">در حال بارگذاری افکت‌ها، پرسش‌ها و مسیر نهایی تیپ شخصیتی...</p>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <div class="stars" id="stars"></div>
+
+  <div class="wrap">
+    <section id="introScreen" class="screen glass hero">
+      <div class="hero-grid">
+        <div>
+          <div class="badge">✦ روان‌طب | کلینیک روان‌درمانی روزبه</div>
+          <h1>آزمون MBTI با هویت حرفه‌ای و خروجی PDF رسمی</h1>
+          <p class="lead">
+            قبل از شروع، قوانین را بخوانید، سپس وارد آزمون شوید و در پایان، PDF نتیجه را با مشخصات و برند مجموعه دریافت کنید.
+          </p>
+          <div class="cta-row">
+            <button class="cta" id="rulesBtn">مطالعه قوانین</button>
+          </div>
+        </div>
+        <div class="orb" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section id="rulesScreen" class="app">
+      <div class="glass panel">
+        <h2 class="qtitle">راهنما و قوانین</h2>
+        <div class="rules">
+          <p>1) این آزمون برای خودشناسی طراحی شده و جایگزین تشخیص یا درمان تخصصی نیست.</p>
+          <p>2) لطفاً پاسخ‌ها را با اولین انتخاب طبیعی خودتان ثبت کنید.</p>
+          <p>3) برای نتیجه بهتر، آزمون را در محیطی آرام و بدون مزاحمت انجام دهید.</p>
+          <p>4) پس از پایان، می‌توانید PDF نتیجه را دانلود کنید.</p>
+          <p>5) این خروجی با نام و هویت «روان‌طب» و «کلینیک روان‌درمانی روزبه» آماده می‌شود.</p>
+        </div>
+        <div class="controls">
+          <button class="ghost" id="backIntroBtn">بازگشت</button>
+          <button class="cta" id="acceptRulesBtn">پذیرش و شروع آزمون</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="quizApp" class="app">
+      <div class="topbar">
+        <div>سؤال <span id="qCount">1</span> از 87</div>
+        <div id="dimensionLabel">E / I</div>
+      </div>
+      <div class="progress"><div class="bar" id="bar"></div></div>
+
+      <div id="quizPanel" class="glass panel">
+        <div class="qmeta">
+          <div id="qNo">سؤال 1</div>
+          <div id="qPercent">0%</div>
+        </div>
+        <h2 class="qtitle" id="qText"></h2>
+        <div class="options" id="options"></div>
+        <div class="controls">
+          <button class="ghost" id="prevBtn">قبلی</button>
+          <button class="ghost" id="skipBtn">بعدی</button>
+        </div>
+      </div>
+
+      <div id="resultPanel" class="glass result">
+        <div class="brand-row">
+          <div class="brand-box">
+            <div class="brand-logo placeholder">LOGO</div>
+            <div class="brand-text">
+              <div class="brand-title">روان‌طب</div>
+              <div class="brand-sub">کلینیک روان‌درمانی روزبه</div>
+            </div>
+          </div>
+          <div class="result-meta">
+            <div>گزارش آزمون MBTI</div>
+            <div id="resultDate"></div>
+          </div>
+        </div>
+
+        <div class="type" id="typeText">----</div>
+        <p class="desc" id="typeDesc"></p>
+
+        <div class="scores">
+          <div class="score"><span>E / I</span><b id="eiScore">0 - 0</b></div>
+          <div class="score"><span>S / N</span><b id="snScore">0 - 0</b></div>
+          <div class="score"><span>T / F</span><b id="tfScore">0 - 0</b></div>
+          <div class="score"><span>J / P</span><b id="jpScore">0 - 0</b></div>
+        </div>
+
+        <div class="pdf-fields">
+          <input id="fullName" placeholder="نام و نام خانوادگی آزمودنی" />
+          <input id="age" placeholder="سن" />
+        </div>
+
+        <div class="controls">
+          <button class="ghost" id="restartBtn">شروع دوباره</button>
+          <button class="cta" id="pdfBtn">دانلود PDF نتیجه</button>
+        </div>
+
+        <div class="footer-note">در نسخه نهایی، لوگوی رسمی جایگزین placeholder می‌شود.</div>
+      </div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
